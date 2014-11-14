@@ -1,0 +1,430 @@
+/*body {
+  background: #222222;
+}*/
+
+#widget_area_main_wrap_full, #widget_area_main_wrap
+{
+	padding:5px;
+}
+
+.sja-grid, .sja-featured-content {
+  width: 95%;
+  max-width: 1400px;
+  /*margin: 20px auto;*/
+    margin:0 auto;
+    margin-top:0;
+/*  line-height: 0;*/
+  -webkit-column-gap: 20;
+  -moz-column-gap: 20;
+  -ms-column-gap: 20;
+  -o-column-gap: 20;
+  column-gap: 20;
+  
+  /*
+  -webkit-column-count: 5;
+  -moz-column-count: 5;
+  -ms-column-count: 5;
+  -o-column-count: 5;
+  column-count: 5;*/
+}
+
+.sja-grid{
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    -ms-column-count: 4;
+    -o-column-count: 4;
+    column-count: 4;
+}
+.sja-featured-content{
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    -ms-column-count: 1;
+    -o-column-count: 1;
+    column-count: 1;
+}
+
+.sja-featured-content a div.sja-feature{
+    background-color: #F1F8FE;
+    width:100%;
+    display: inline-block;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+    height: auto ;  /* !important;*/
+    margin-bottom: 10px;
+    position:relative;
+}
+
+.sja-featured-content a .sja-feature .entry-image{
+    float:left;
+    width:50%;
+}
+.sja-featured-content a .sja-feature .entry-image img{
+    width:100%;
+}
+
+.sja-feature a{
+    width:100%;
+    height:100%;
+    z-index:10;
+    position :absolute;
+    top:0;
+    left:0;
+}
+
+.sja-grid img {
+  display: inline-block;
+  width: 100% !important;
+  height: 100% !important;
+}
+div.sja-pin{
+    border-bottom-right-radius: 10px;
+}
+
+.sja-grid div.sja-pin {
+  background-color: #f5f5f5;
+  display: inline-block;
+  margin-bottom: 15px;
+  width: 100% !important;
+  height: auto ;/* !important;*/
+  /*border-top:5px solid #F1F8FE;*/
+  position:relative;
+    /*border:5px solid purple;*/
+}
+.sja-grid div.sja-pin a{
+    color:#4E83B8;
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    text-decoration:none; /* Makes sure the link   doesn't get underlined */
+    z-index:10; /* raises anchor tag above everything else in div */
+
+/*
+    background-color:white; /*workaround to make clickable in IE
+    opacity: 0; /*workaround to make clickable in IE
+    filter: alpha(opacity=1); /*workaround to make clickable in IE
+    */
+}
+
+.sja-shadow{
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.sja-ad{
+    position:relative;
+    width:100%;
+
+    border:none;
+    margin:0;
+    padding:0;
+    background-color:transparent;
+
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    -ms-column-count: 1;
+    -o-column-count: 1;
+    column-count: 1;
+}
+.sja-ad img{
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+    width:100%;
+    height:auto !important;
+}
+
+.sja-grid div.sja-pin:hover {
+
+    background-color:#4e83b8;
+
+    -o-transition:color .2s ease-out, background 1s ease-in;
+    -ms-transition:color .2s ease-out, background 1s ease-in;
+    -moz-transition:color .2s ease-out, background 1s ease-in;
+    -webkit-transition:color .2s ease-out, background 1s ease-in;
+    /* ...and now override with proper CSS property */
+    transition:color .2s ease-out, background 1s ease-in;
+}
+.sja-grid div.sja-pin:hover h2{
+    color:ghostwhite;
+}
+.sja-grid div.sja-pin:hover p{
+    color:ghostwhite;
+}
+.sja-grid div.sja-pin img:hover{}
+
+.grid div.sja-grid p{
+	width:85%;
+}
+
+.grid div:hover {
+  display: inline-block;
+  margin-bottom: 15px;
+  width: 100% !important;/*
+  height: auto !important;/*
+  -ms-transform: rotate(-1deg);
+  -webkit-transform: rotate(-1deg);
+  -moz-transform: rotate(-1deg);
+  -o-transform: rotate(-1deg);
+  transform: rotate(-1deg);*/
+ /*   outline: 5px solid gray;
+	outline-offset: 10px;
+	
+-webkit-filter: opacity(100%);
+-webkit-filter: hue-rotate(10deg);*/
+
+-webkit-filter: grayscale(40%);
+}
+
+.sja-grid div .entry-text{
+    line-height:100%;
+    padding-top:15px;
+    padding-left:15px;
+    padding-right:15px;
+    padding-bottom:5px;
+}
+
+.entry-text h2{
+    color:#4E83B8;
+}
+.entry-text p{
+    text-align: left;
+    color:#4E83B8;
+}
+.sja-random-posts{
+    /*    background-color: #F1F8FE;*/
+    display: inline-block;
+/*    margin-bottom: 15px;*/
+    width: 100% !important;
+    height: auto ;/* !important;*/
+}
+
+.sja-post-mini{
+    height:75px;
+    background-color:#F1F8FE;
+    margin-bottom:15px;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+/*    -webkit-filter: grayscale(0%);*/
+    border:1px solid purple;
+}
+.sja-post-mini:hover{
+    background-color:#CBE5FC;
+}
+
+.sja-left{
+    float:left;
+}
+.sja-right{
+    float:right;
+}
+.sja-headline{
+    width:65%;
+    padding-left:5%;
+    padding-right:3%;
+    padding-top:15px;
+    height:35px;
+}
+.sja-thumb-img{
+    width: 75px;
+    height: 75px;
+    background-position: center center;
+}
+.sja-thumb-img-img{
+
+}
+
+
+@media (max-width: 1200px) {
+  .sja-grid {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    -ms-column-count: 3;
+    -o-column-count: 3;
+    column-count: 3;
+  }
+}
+@media (max-width: 1000px) {
+  .sja-grid {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    -ms-column-count: 3;
+    -o-column-count: 3;
+    column-count: 3;
+  }
+}
+@media (max-width: 800px) {
+  .sja-grid {
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+      -ms-column-count: 3;
+      -o-column-count: 3;
+      column-count: 3;
+  }
+  /*}*/
+    /*.sja-headline{*/
+        /*width:55%;*/
+        /*padding-left:5%;*/
+        /*padding-right:3%;*/
+        /*padding-top:15px;*/
+        /*height:35px;*/
+    /*}*/
+    /*.sja-thumb-img{*/
+        /*width: 35%;*/
+        /*height: 75px;*/
+        /*background-position: center center;*/
+    /*}*/
+}
+
+@media (max-width: 769px) {
+    .sja-featured-content{
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        -ms-column-count: 1;
+        -o-column-count: 1;
+        column-count: 1;
+    }
+    .sja-grid {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        -ms-column-count: 2;
+        -o-column-count: 2;
+        column-count: 2;
+    }
+    .sja-featured-content a .sja-feature{
+        display:block;
+        margin-bottom: 10px;
+    }
+    .widget
+    {
+        width:40% !important;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+}
+
+@media (max-width: 600px) {
+    .sja-featured-content{
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        -ms-column-count: 1;
+        -o-column-count: 1;
+        column-count: 1;
+    }
+}
+
+@media (max-width: 485px) {
+    .widget
+    {
+        margin-left: 2.5%;
+        width:85% !important;
+    }
+    .sja-grid {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        -ms-column-count: 1;
+        -o-column-count: 1;
+        column-count: 1;
+    }
+    .sja-featured-content{
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        -ms-column-count: 1;
+        -o-column-count: 1;
+        column-count: 1;
+    }
+    .sja-featured-content a .sja-feature{
+        display:block;
+    }
+    .sja-featured-content a .sja-feature .entry-image{
+        float:none;
+        width:100%;
+        display:block;
+    }
+    .sja-featured-content a .sja-feature .entry-image img{
+        width:100%;
+    }
+    .sja-featured-content a .sja-feature .entry-text{
+        float:none;
+        width:100%;
+        display:block;
+        margin-left:10px;
+    }
+    .sja-featured-content a .sja-feature .entry-text p{
+        display:none;
+    }
+    .sja-featured-content a .sja-feature .entry-text h2{
+
+    }
+}
+
+
+
+
+.widget
+{
+background-color: ghostwhite;
+
+}
+.width_223{
+clear:both;
+}
+.width_695
+{
+width:97.5%;
+}
+.content_main{
+margin:0;
+padding:0;
+}
+.sja-grid, .sja-featured-content, #mypage
+{
+margin:0;
+padding:0;
+}
+.sja-grid, .sja-featured-content
+{
+width:100%;
+}
+.sja-post-mini h2{
+font-size:1em;
+}
+.small-post{
+    background-color: ghostwhite;
+    margin-bottom: 10px;
+    border-bottom-right-radius: 10px;
+    border-left:10px solid #4E83B9;
+    border-left:10px solid #ADD7FD;
+}
+.small-post h3{
+    padding-top:1em;
+    padding-bottom:1em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.small-post a{
+    text-decoration: none;
+}
+.small-post:hover{
+    background-color:#4e83b8;
+
+    -o-transition:color .2s ease-out, background 1s ease-in;
+    -ms-transition:color .2s ease-out, background 1s ease-in;
+    -moz-transition:color .2s ease-out, background 1s ease-in;
+    -webkit-transition:color .2s ease-out, background 1s ease-in;
+    /* ...and now override with proper CSS property */
+    transition:color .2s ease-out, background 1s ease-in;
+}
+
+.small-post:hover h3{
+    color:ghostwhite;
+}
+
+/* next slider */
+
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
