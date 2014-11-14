@@ -1,0 +1,22 @@
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <input type="hidden" name="cmd" value="_cart">
+    <!--<input type="hidden" name="cmd" value="_express-checkout">-->
+    <!--<input type="hidden" name="useraction" value="commit">-->
+    <input type="hidden" name="upload" value="1">
+    <input type="hidden" name="business" value="kavos@cheekydrink.com">
+
+    {PAYPAL_ITEMS}
+
+    <input type="hidden" name="notify_url" value="manage.kavosbooked.com/ipn">
+    <input type="hidden" name="return" value="discount.kavosbooked.com/oto">
+    <input type="hidden" name="rm" value="2">
+    <input type="hidden" name="cbt" value="Return to KavosBooked.com">
+    <input type="hidden" name="cancel_url" value="http://www.kavosbooked.com/cart">
+    <input type="hidden" name="lc" value="UK">
+    <input type="hidden" name="currency_code" value="GBP">
+    <input type="image" name="submit" alt="Pay with Paypal" src="http://www.clker.com/cliparts/9/1/5/2/119498475589498995button-red_benji_park_01.svg.med.png">
+
+
+
+
+</form>
