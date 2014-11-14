@@ -20,7 +20,7 @@
 #header{
     /*border: 5px solid purple;*/
     height:auto;
-    height:50px;
+    height:20px;
     background-color: transparent;
     background-image: url("../travel_island/images/menu_bg_tile.jpg");
     background-repeat: repeat-x;
@@ -58,7 +58,7 @@
     padding:0;
     margin:0;
     clear:none;
-    padding-bottom: 10px;
+    /*padding-bottom: 10px;*/
     background:none;
 }
 #header_menu a{
@@ -132,6 +132,10 @@
 
 
 @media only screen and (max-width: 799px) {
+
+    #my-page{
+        padding-top: 40px;
+    }
 
     #header_menu{
         /*display:none;*/
