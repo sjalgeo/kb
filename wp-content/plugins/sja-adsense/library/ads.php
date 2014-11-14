@@ -13,7 +13,14 @@ function sjaGetTemplate($align='center')
 {
     $template_path = SJA_ADS_TEMPLATES.'ad-'.$align.'.html';
 
-    if (!file_exists($template_path)) return false;
+    if (!file_exists($template_path)) return '';
 
+    return file_get_contents($template_path);
+}
+
+function sjaGetScript()
+{
+    $template_path = SJA_ADS_TEMPLATES.'script.html';
+    if (!file_exists($template_path)) return '';
     return file_get_contents($template_path);
 }

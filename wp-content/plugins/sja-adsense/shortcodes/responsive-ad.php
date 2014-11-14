@@ -11,6 +11,8 @@ function sja_adsense_shortcode($atts){
        ), $atts ));
 
 
+    $id = substr(microtime(), -8);
+
     $template = sjaGetTemplate();
 //    $ad = sjaGetAdBySize('729x90');
 //    $ad = sjaGetAdBySize('250x250');
@@ -19,6 +21,8 @@ function sja_adsense_shortcode($atts){
 //    $ad = sjaGetAdBySize('320x100');
 //    $ad = sjaGetAdBySize('970x250');
     $template = str_replace('{CREATIVE}', $ad, $template);
+    $template = str_replace('{SCRIPT}', sjaGetScript(), $template);
+    $template = str_replace('{ID}', $id, $template);
     return $template;
 }
 
