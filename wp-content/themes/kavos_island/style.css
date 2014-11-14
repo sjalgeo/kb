@@ -162,7 +162,7 @@ div.entry-header h1 span, div.entry-header h2 span{
 #content_bg{
     background: rgba(201, 228, 254, 0.3);
     background: #ffffff;
-    padding-bottom:30px;
+    /*padding-bottom:30px;*/
     background-color: ghostwhite;
 }
 
