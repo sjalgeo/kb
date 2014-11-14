@@ -7,14 +7,13 @@ Author:
 Author URI: 
 */
 
+define ('HPP_PLUGIN_PATH', plugin_dir_path(__FILE__));
 
 	include("shortcodes/grid-layout.php");
-
+    include ('library/debug.php');
 
     # Functions
     include("library/functions.php");
-    include("widgets/1830.php");
-    include("widgets/adsense.php");
 
 
 function safely_add_stylesheet() {
