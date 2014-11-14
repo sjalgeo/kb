@@ -9,16 +9,6 @@ Author URI: TODO
 Tested up to: 4.0
  */
 
-define('DEV_MODE','1');
-
-if ( DEV_MODE == '1'){
-    # Config related to development
-    ini_set('display_errors', 'on');                # Error settings if in dev mode
-    error_reporting(E_ALL);
-
-    include('library/debug.php');
-}
-
 define('KBTICKETS_PLUGIN_PATH', plugin_dir_path(__FILE__));
 define('KBTICKETS_VIEWS', plugin_dir_path(__FILE__).'views/');
 define('KBTICKETS_PLUGIN_SLUG','kavos-tickets');
