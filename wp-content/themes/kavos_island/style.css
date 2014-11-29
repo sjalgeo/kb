@@ -7,7 +7,7 @@ Theme Name: Kavos Island
 Description: Child of Travel Island
 Author: Stephen J. Algeo
 Template: travel_island
-Version 1.3
+Version 2.0
 */
 p,h1, h2, h3, h4, h5, h6{
     font-family: 'Raleway','Lucida Sans Unicode', sans-serif;
@@ -164,6 +164,7 @@ div.entry-header h1 span, div.entry-header h2 span{
     background: #ffffff;
     /*padding-bottom:30px;*/
     background-color: ghostwhite;
+    margin-top: 10px;
 }
 
 .width_223 {
