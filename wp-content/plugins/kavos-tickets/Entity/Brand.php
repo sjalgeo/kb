@@ -7,6 +7,7 @@ class Brand {
     private $slug;
     private $image;
     private $description;
+    private $defaultprice;
 
     public function __construct($id)
     {
@@ -22,6 +23,7 @@ class Brand {
             $this->slug = $brand->slug;
             $this->image = $brand->image;
             $this->description = $brand->description;
+            $this->defaultprice = $brand->defaultprice;
         }
     }
 
@@ -79,6 +81,23 @@ class Brand {
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDefaultprice()
+    {
+        return $this->defaultprice;
+    }
+
+    /**
+     * @param mixed $defaultprice
+     */
+    public function setDefaultprice($defaultprice)
+    {
+        $this->defaultprice = $defaultprice;
+        return $this;
     }
 
 }

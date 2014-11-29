@@ -23,6 +23,8 @@ function kbGetCartTable()
         $counter=1;
         $subtotal=0;
 
+//        sja_debug($cart);
+
         foreach ($cart as $key => $cartitem) {
             $thisrow = $row;
             $eventid = array_lookup($cartitem, 'eventid');
@@ -30,8 +32,9 @@ function kbGetCartTable()
 
             if ($eventid AND $quantity) {
                 $event = new Event($eventid);
-                $name = $event->getArtist().' - '.$event->getDateFormatted();
-                $price = $event->getPrice();
+                $name = $event->getDisplayName();
+                $paypalname = $event->getPaypalName();
+                $price = $event->getPrice($cartitem['variations']);
                 $total = $price * $quantity;
                 $subtotal += $total;
                 $thisrow = str_replace('{SINGLE_PRICE}', $quantity . ' x ' . kbFormatPrice($price), $thisrow);

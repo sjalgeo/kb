@@ -1,20 +1,50 @@
 <script type="text/javascript">
 
-    window.siteurl = 'http://localhost:8888/kb15/';
+    window.siteurl = 'http://localhost:8888/kb/';
+
+    function kbUpdatePrice($brandid){
+//        console.log(123);
+//        console.log();
+
+        $eventid = jQuery('#kbeventselect').val();
+
+        jQuery.ajax({
+            url: window.siteurl + 'wp-content/plugins/kavos-tickets/ajax/getprice.php',
+            type: 'POST',
+            data: {
+                eventid: $eventid,
+                brandid: $brandid
+            },
+            success: function(data, textStatus, xhr) {
+
+                jQuery('#kbPrice').html(data);
+            },
+            error: function(xhr, textStatus, errorThrown) {
+                console.log(textStatus.reponseText);
+            }
+        });
+
+    }
 
     function kbAddToCart($brandid)
     {
         $quantity = jQuery('#kbquantity').val();
-        $eventid = jQuery('#kbeventid').val();
+        $eventid = jQuery('#kbeventselect').val();
+        $cruiseticket = jQuery('#kbcruiseticket').val();
+
+        var $options = {};
+
+        jQuery('.kbselect').each(function() {
+            $key = jQuery('#'+this.id).attr('optiontype');
+            $options[$key] = jQuery('#'+this.id).val();
+        });
+
+        $options['brandid'] = $brandid;
 
         jQuery.ajax({
             url: window.siteurl + 'wp-content/plugins/kavos-tickets/ajax/addtocart.php',
             type: 'POST',
-            data: {
-                eventid: $eventid,
-                brandid: $brandid,
-                quantity: $quantity
-            },
+            data: $options,
             success: function(data, textStatus, xhr) {
 
                 console.log(data);

@@ -103,24 +103,62 @@ class Event
         return $this->name;
     }
 
+    public function getDisplayName()
+    {
+        $brand = new Brand($this->brand_id);
+        $name = $brand->getName().' - '.$this->getDateFormatted();
+        if ($this->artist!='') $name .= ' ('.$this->artist.')';
+        return $name;
+    }
+
+    public function getPaypalName()
+    {
+        $brand = new Brand($this->brand_id);
+        $name = $brand->getName().' - '.$this->getDateFormatted();
+        if ($this->artist!='') $name .= ' ('.$this->artist.')';
+        return $name;
+    }
+
     public function setName($name)
     {
         $this->name = $name;
     }
 
-    public function getPrice()
+    public function getPrice($variations=false)
     {
+        if($variations!=false){
+
+            $opts = kbOptionsCruiseTicketData();
+
+            foreach ($variations as $key => $var) {
+                if ($key=='cruiseticket')
+                {
+                    return $opts[$var]['priceraw'];
+                }
+            }
+        }
+        elseif (is_null($this->price))
+        {
+            $brand = new Brand($this->brand_id);
+            return $brand->getDefaultPrice();
+        }
+
         return $this->price;
     }
 
     public function getPaypalPrice()
     {
-        return kbPaypalPrice($this->price);
+        return kbPaypalPrice($this->getPrice());
     }
 
     public function setPrice($price)
     {
         $this->price = $price;
+    }
+
+    public function getPriceFormatted()
+    {
+        return kbFormatPrice($this->getPrice());
     }
 
     public function getSlug()

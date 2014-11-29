@@ -6,7 +6,6 @@ function sja_kavos_cart_shortcode($atts){
 
             ), $atts ));
 
-
         echo kbGetCartTable();
 
 }

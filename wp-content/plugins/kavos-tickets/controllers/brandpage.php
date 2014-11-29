@@ -12,6 +12,7 @@ function createBrandPage($brand)
     $data['SCRIPT'] = getElement('script.html');
 
     # Load Parameters
+    $data['BRAND_ID'] = $brand->getId();
     $data['BRAND_TITLE'] = $brand->getName();
     $data['BRAND_IMAGE'] = $brand->getImage();
     $data['BRAND_DESCRIPTION'] = $brand->getDescription();
