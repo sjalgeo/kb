@@ -24,15 +24,3 @@ function safely_add_stylesheet() {
 }
 
 add_action( 'wp_enqueue_scripts', 'safely_add_stylesheet' );
-
-
-
-function sjawp_load_admin_only_scripts(){
-
-    # Stylesheet for admin
-    $stylesheetpath = plugins_url(). "/home-page-pins/css/home.css";
-    wp_register_style( 'sja-home-override', $stylesheetpath, false, '1.0.0' );
-    wp_enqueue_style( 'sja-home-override' );
-
-}
-add_action( 'wp_enqueue_scripts', 'sjawp_load_admin_only_scripts' ,0);
