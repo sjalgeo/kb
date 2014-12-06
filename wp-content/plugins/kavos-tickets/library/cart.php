@@ -34,6 +34,7 @@ function kbGetCartTable()
                 $event = new Event($eventid);
                 $name = $event->getDisplayName();
                 $paypalname = $event->getPaypalName();
+
                 $price = $event->getPrice($cartitem['variations']);
                 $total = $price * $quantity;
                 $subtotal += $total;
@@ -42,12 +43,28 @@ function kbGetCartTable()
                 $thisrow = str_replace('{TOTAL_PRICE}', kbFormatPrice($total), $thisrow);
                 $rows .= $thisrow;
 
+                $variations = '';
+                $varcount = 0;
+
+                foreach($cartitem['variations'] as $key => $var)
+                {
+                    $variations .= '<input type="hidden" name="on'.$varcount.'_'.$counter.'" value="'.$key.'">';
+                    $variations .= '<input type="hidden" name="os'.$varcount.'_'.$counter.'" value="'.$var.'">';
+
+                    $varcount++;
+                }
+
+
                 # Generate Paypal Form
                 $thisitem = $paypal_item;
                 $thisitem = str_replace('{COUNTER}', $counter, $thisitem);
                 $thisitem = str_replace('{ITEM_NAME}', $name, $thisitem);
+                $thisitem = str_replace('{ITEM_ID}', $event->getId(), $thisitem);
                 $thisitem = str_replace('{ITEM_PRICE}', $event->getPaypalPrice(), $thisitem);
                 $thisitem = str_replace('{ITEM_QUANTITY}', $quantity, $thisitem);
+
+
+                $thisitem = str_replace('{ITEM_VARIATIONS}', $variations, $thisitem);
 
                 $pp_items .= $thisitem;
 
