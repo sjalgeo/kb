@@ -10,30 +10,34 @@ function kbGetProductOptions($brand)
     if (is_array($productoptions)){
         foreach($productoptions as $opt)
         {
-            $html .= kbGetOption($brand, $opt->optiontype);
+            $html .= kbGetOption($brand, $opt);
         }
     }
 
     return $html;
 }
 
-function kbGetOption($brand, $type)
+function kbGetOption($brand, $opt)
 {
+    $type = $opt->optiontype;
+
     if ($type=='quantity')
     {
-        return kbOptionsQuantity(20);
+        $select = kbOptionsQuantity(20);
     }
     elseif ($type=='event'){
-        return kbOptionsEvent($brand);
+        $select = kbOptionsEvent($brand);
     }
     elseif($type=='viptable')
     {
-        return kbOptionsVipTable();
+        $select = kbOptionsVipTable();
     }
     elseif ($type=='cruiseticket')
     {
-        return kbOptionsCruiseTicket();
+        $select = kbOptionsCruiseTicket();
     }
+
+    return str_replace('{SELECT_TITLE}', $opt->optiontitle, $select);
 }
 
 function kbOptionsEvent($brand)
