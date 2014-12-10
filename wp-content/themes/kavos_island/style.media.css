@@ -24,6 +24,25 @@
 }
 
 /* Tablet Portrait size to standard 960 (devices and browsers) */
+/*@media only screen and (min-width: 768px) and (max-width: 959px) {*/
+@media only screen and (max-width: 768px) {
+
+    .kbleft {
+        width: 100%;
+        border:12 px solid pink;
+    }
+
+    .kbright {
+        width: 100%;
+        /*float: left;*/
+    }
+
+    .kbleft img{
+        width:auto;
+    }
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 
     .bg_details{
@@ -105,6 +124,7 @@
 }
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+
     .bg_details,
     .bg_wave_tile,
     .bg_wave_tile_cover{
