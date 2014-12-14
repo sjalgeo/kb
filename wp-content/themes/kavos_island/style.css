@@ -1,6 +1,7 @@
 @import url("../travel_island/style.css");
 /*@import url(http://fonts.googleapis.com/css?family=Proxima+Nova);*/
 @import url(http://fonts.googleapis.com/css?family=Raleway);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
 
 /*
 Theme Name: Kavos Island
@@ -10,7 +11,7 @@ Template: travel_island
 Version 2.0
 */
 p,h1, h2, h3, h4, h5, h6{
-    font-family: 'Raleway','Lucida Sans Unicode', sans-serif;
+    font-family: 'Open Sans','Lucida Sans Unicode', sans-serif;
 }
 
 li{
@@ -20,9 +21,12 @@ li{
 p{
 	/*font-family:'Proxima Nova','Lucida Sans Unicode',sans serif;*/
     font-family: 'Raleway','Lucida Sans Unicode', sans-serif;
+    font-family: 'Open Sans','Lucida Sans Unicode', sans-serif;
 	font-weight:300;
+	font-weight:100;
 	text-align:justify;
-	font-size:1em;
+	font-size:1.5em;
+	line-height: 1.5;
 }
 body{font-family: 'Raleway','Lucida Sans Unicode', sans-serif;}
 h1, h2, h3, h4, h5, h6
@@ -30,6 +34,7 @@ h1, h2, h3, h4, h5, h6
     font-weight: 300;
     line-height: 1.2;
     color: #3a3a3a;
+    font-size:1.5em;
 }
 
 a{
@@ -112,15 +117,19 @@ div.blog, #widget_area_main_wrap.left_column{
 
 
 div.entry-header h1 span, div.entry-header h2 span{
-    font-family: 'Raleway','Lucida Sans Unicode', sans-serif;
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  line-height: 1.5em;
-  display: inline-block;
-  text-shadow: #ffffff;
+    /*font-family: 'RalewayRaleway','Lucida Sans Unicode', sans-serif;*/
+    font-family: 'Open Sans','Lucida Sans Unicode', sans-serif;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    /*padding-left: 20px;*/
+    margin-left: 20px;
+    line-height: 1.5em;
+    display: inline-block;
+    text-shadow: #ffffff;
     color: #4e83b8;
+    font-size: 1.5em;
+    margin-top: 10px;
+
 }
 .entry-title span{
     margin-left:10px;
@@ -206,8 +215,9 @@ a.comment-reply-link:hover, a.comment-reply-link:focus, a.comment-reply-link:act
     /*padding-bottom: 6px;*/
 }
 .blog_text, .entry-content {
-    margin-right:10px;
-    margin-left:10px;
+    margin-right:30px;
+    margin-left:30px;
+    margin-top:40px;
 }
 
 img.alignleft, img.alignright, img.aligncenter{
@@ -217,14 +227,14 @@ img.alignleft, img.alignright, img.aligncenter{
 }
 h3,h4{
     color:#4e83b8;
-    font-size:1em;
+    font-size:1.5em;
 }
 
 div.blog .date_flag {
     background-image:none;
     border-radius: 5px 5px 5px 5px;
     color:#4e83b8;
-    font-family: 'Raleway','Lucida Sans Unicode', sans-serif;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin-left: 15px;
     text-shadow: none;
 }

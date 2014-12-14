@@ -65,6 +65,7 @@
     margin-top: 12px;
     padding-right:10px;
     padding-left:10px;
+    font-family: 'Raleway','Lucida Sans Unicode', sans-serif;
 }
 #header_menu a h1{
     display: inline-block;
@@ -75,6 +76,7 @@
     padding:0;
     /*text-transform: uppercase;*/
     font-size:1em;
+    font-family: 'Raleway','Lucida Sans Unicode', sans-serif;
 }
 #header_menu a h1 span{
     font-variant:small-caps;
