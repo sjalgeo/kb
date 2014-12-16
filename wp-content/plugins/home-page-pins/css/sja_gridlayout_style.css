@@ -193,6 +193,7 @@ div.sja-pin{
 .entry-text p{
     text-align: left;
     color:#4E83B8;
+    font-size: 1.2em;
 }
 .sja-random-posts{
     /*    background-color: #F1F8FE;*/
@@ -405,6 +406,7 @@ font-size:1em;
     padding-bottom:1em;
     text-align: center;
     text-decoration: none;
+    font-size: 1.2em;
 }
 
 .small-post a{

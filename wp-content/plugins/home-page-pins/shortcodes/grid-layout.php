@@ -52,7 +52,7 @@ function grid_layout($atts){
         'wp-content/uploads/2014/01/trinity_square-trans-300x294.png',
         '../product/trinity-clubnights/',
         'Club Trinity Live in Kavos',
-        "Huge Summer for 2014. Book Now!");
+        "Huge Summer for 2015. Book Now!");
 
     $layout_output .= sja_create_post_pin(
         'wp-content/uploads/2014/01/buzz-bar-street-view.jpg',
@@ -94,7 +94,7 @@ function grid_layout($atts){
         'wp-content/uploads/2013/11/super-paint-party-20141-300x300.jpg',
         '../product/super-paint-party/',
         'Super Paint Party',
-        "Last year's biggest party returns for 2014");
+        "Last year's biggest party returns for 2015");
 
 //    $layout_output .= sja_create_post_pin(
 //        'wp-content/uploads/2014/04/dapper_laughs_kavos-228x228.jpg',
