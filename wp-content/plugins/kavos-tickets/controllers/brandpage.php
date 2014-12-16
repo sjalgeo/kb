@@ -16,6 +16,7 @@ function createBrandPage($brand)
     $data['BRAND_TITLE'] = $brand->getName();
     $data['BRAND_IMAGE'] = $brand->getImage();
     $data['BRAND_DESCRIPTION'] = $brand->getDescription();
+    $data['BRAND_FROM_PRICE'] = $brand->getDefaultprice();
 
     return loadView($view, $data);
 }

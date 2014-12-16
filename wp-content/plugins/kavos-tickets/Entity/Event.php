@@ -133,7 +133,7 @@ class Event
             foreach ($variations as $key => $var) {
                 if ($key=='cruiseticket')
                 {
-                    return $opts[$var]['priceraw'];
+                    return kbFormatPrice($opts[$var]['priceraw']);
                 }
             }
         }
@@ -143,7 +143,7 @@ class Event
             return $brand->getDefaultPrice();
         }
 
-        return $this->price;
+        return kbFormatPrice($this->price);
     }
 
     public function getPaypalPrice()
@@ -156,9 +156,22 @@ class Event
         $this->price = $price;
     }
 
-    public function getPriceFormatted()
+    public function getPriceFormatted($option=false, $value=false)
     {
-        return kbFormatPrice($this->getPrice());
+        if (false==$option) {
+            return $this->getPrice();
+        }
+        elseif ($option=='cruiseticket'){
+            $prices = kbOptionsCruiseTicketData();
+            $price = $prices[$value]['priceraw'];
+            return kbFormatPrice($price);
+        }
+        else{
+
+            # TODO : LOG THIS AND EMAIL ME
+
+            return 'Price Not Found.';
+        }
     }
 
     public function getSlug()

@@ -3,20 +3,27 @@
     window.siteurl = 'http://localhost:8888/kb/';
 
     function kbUpdatePrice($brandid){
-//        console.log(123);
-//        console.log();
 
-        $eventid = jQuery('#kbeventselect').val();
+        $option = false;
+        $value = false;
+
+        if (jQuery('#kbcruiseticket').length != 0) {
+            $option = 'cruiseticket';
+            $value = jQuery('#kbcruiseticket').val()
+        }
+
+        $data  = {
+            option: $option,
+            value: $value,
+            eventid: jQuery('#kbeventselect').val(),
+            brandid: $brandid
+        };
 
         jQuery.ajax({
             url: window.siteurl + 'wp-content/plugins/kavos-tickets/ajax/getprice.php',
             type: 'POST',
-            data: {
-                eventid: $eventid,
-                brandid: $brandid
-            },
+            data: $data,
             success: function(data, textStatus, xhr) {
-
                 jQuery('#kbPrice').html(data);
             },
             error: function(xhr, textStatus, errorThrown) {

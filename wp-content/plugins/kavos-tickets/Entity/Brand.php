@@ -67,37 +67,26 @@ class Brand {
         return $this->slug;
     }
 
-    /**
-     * @param mixed $description
-     */
     public function setDescription($description)
     {
         $this->description = $description;
     }
 
-    /**
-     * @return mixed
-     */
     public function getDescription()
     {
         return $this->description;
     }
 
-    /**
-     * @return mixed
-     */
     public function getDefaultprice()
     {
-        return $this->defaultprice;
+        if (!is_null($this->defaultprice)) return  kbFormatPrice($this->defaultprice);
+
+        return 'null';
     }
 
-    /**
-     * @param mixed $defaultprice
-     */
     public function setDefaultprice($defaultprice)
     {
         $this->defaultprice = $defaultprice;
         return $this;
     }
-
 }
