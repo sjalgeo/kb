@@ -23,8 +23,6 @@ function kbGetCartTable()
         $counter=1;
         $subtotal=0;
 
-//        sja_debug($cart);
-
         foreach ($cart as $key => $cartitem) {
             $thisrow = $row;
             $eventid = array_lookup($cartitem, 'eventid');
@@ -81,5 +79,5 @@ function kbGetCartTable()
         return $table;
     }
 
-    return '';
+    return '<p>There are no items currently in your cart.</p>';
 }
