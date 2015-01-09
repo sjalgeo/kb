@@ -126,14 +126,19 @@ class Event
 
     public function getPrice($variations=false)
     {
-        if($variations!=false){
+        return kbFormatPrice($this->getPriceRaw($variations));
+    }
+
+    public function getPriceRaw($variations=false)
+    {
+        if($variations!=false AND $variations != array()){
 
             $opts = kbOptionsCruiseTicketData();
 
             foreach ($variations as $key => $var) {
                 if ($key=='cruiseticket')
                 {
-                    return kbFormatPrice($opts[$var]['priceraw']);
+                    return $opts[$var]['priceraw'];
                 }
             }
         }
@@ -143,12 +148,12 @@ class Event
             return $brand->getDefaultPrice();
         }
 
-        return kbFormatPrice($this->price);
+        return $this->price;
     }
 
     public function getPaypalPrice()
     {
-        return kbPaypalPrice($this->getPrice());
+        return kbPaypalPrice($this->getPriceRaw());
     }
 
     public function setPrice($price)

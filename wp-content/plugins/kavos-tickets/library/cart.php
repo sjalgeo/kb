@@ -33,10 +33,12 @@ function kbGetCartTable()
                 $name = $event->getDisplayName();
                 $paypalname = $event->getPaypalName();
 
+                $priceraw = $event->getPriceRaw($cartitem['variations']);
                 $price = $event->getPrice($cartitem['variations']);
-                $total = $price * $quantity;
+
+                $total = $priceraw * $quantity;
                 $subtotal += $total;
-                $thisrow = str_replace('{SINGLE_PRICE}', $quantity . ' x ' . kbFormatPrice($price), $thisrow);
+                $thisrow = str_replace('{SINGLE_PRICE}', $quantity . ' x ' . $price, $thisrow);
                 $thisrow = str_replace('{EVENT_NAME}', $name, $thisrow);
                 $thisrow = str_replace('{TOTAL_PRICE}', kbFormatPrice($total), $thisrow);
                 $rows .= $thisrow;
