@@ -103,11 +103,16 @@ class Event
         return $this->name;
     }
 
-    public function getDisplayName()
+    public function getDisplayName($variations=false)
     {
         $brand = new Brand($this->brand_id);
         $name = $brand->getName().' - '.$this->getDateFormatted();
         if ($this->artist!='') $name .= ' ('.$this->artist.')';
+
+        foreach($variations as $key => $var){
+            if ($key=='cruiseticket') $name .= ' ('. ucwords($var) . ')';
+        }
+
         return $name;
     }
 

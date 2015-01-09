@@ -8,6 +8,7 @@ class Brand {
     private $image;
     private $description;
     private $defaultprice;
+    private $enabled;
 
     public function __construct($id)
     {
@@ -24,6 +25,7 @@ class Brand {
             $this->image = $brand->image;
             $this->description = $brand->description;
             $this->defaultprice = $brand->defaultprice;
+            $this->enabled = $brand->enabled;
         }
     }
 
@@ -89,4 +91,21 @@ class Brand {
         $this->defaultprice = $defaultprice;
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getEnabled()
+    {
+        return $this->enabled;
+    }
+
+    /**
+     * @param mixed $enabled
+     */
+    public function setEnabled($enabled)
+    {
+        $this->enabled = $enabled;
+    }
+
 }

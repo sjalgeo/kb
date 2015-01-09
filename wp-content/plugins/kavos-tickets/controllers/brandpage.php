@@ -3,9 +3,10 @@
 function createBrandPage($brand)
 {
     $data = array();
-    $view = getView('brand.html');
+    $view = getView('elements/brand/main.html');
 
     # Ticket Types
+    $data['KB_RIGHT'] = $brand->getEnabled() ? getView('elements/brand/available.html') : getView('elements/brand/notavailable.html');
     $data['BUY_OPTIONS'] = kbGetProductOptions($brand);
     $data['BUTTONS'] = getElement('buttons.html');
     $data['SCRIPT'] = getElement('script.html');
