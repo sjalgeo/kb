@@ -17,6 +17,7 @@ function kbGetCartTable()
         $row = getElement('cart/row.html');
 
         $form = getElement('cart/paypal.html');
+        $script = getElement('cart/script.js');
         $paypal_item = getElement('cart/paypal_item.html');
         $pp_items='';
 
@@ -30,7 +31,7 @@ function kbGetCartTable()
 
             if ($eventid AND $quantity) {
                 $event = new Event($eventid);
-                $name = $event->getDisplayName();
+                $name = $event->getDisplayName($cartitem['variations']);
                 $paypalname = $event->getPaypalName();
 
                 $priceraw = $event->getPriceRaw($cartitem['variations']);
@@ -41,6 +42,7 @@ function kbGetCartTable()
                 $thisrow = str_replace('{SINGLE_PRICE}', $quantity . ' x ' . $price, $thisrow);
                 $thisrow = str_replace('{EVENT_NAME}', $name, $thisrow);
                 $thisrow = str_replace('{TOTAL_PRICE}', kbFormatPrice($total), $thisrow);
+                $thisrow = str_replace('{ITEM_ID}', str_replace('.', '_', $key), $thisrow);
                 $rows .= $thisrow;
 
                 $variations = '';
@@ -75,6 +77,7 @@ function kbGetCartTable()
         $form = str_replace('{PAYPAL_ITEMS}', $pp_items, $form);
 
         $table = str_replace('{PAYPAL}', $form, $table);
+        $table = str_replace('{SCRIPT}', $script, $table);
         $table = str_replace('{TABLE_ROWS}', $rows, $table);
         $table = str_replace('{SUB_TOTAL}', kbFormatPrice($subtotal), $table);
 

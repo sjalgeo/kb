@@ -6,7 +6,12 @@ function sja_kavos_cart_shortcode($atts){
 
             ), $atts ));
 
-        echo kbGetCartTable();
+        ?>
+
+    <div id="cart_holder">
+        <?php echo kbGetCartTable(); ?>
+    </div>
+<?php
 
 }
 
