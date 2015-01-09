@@ -4,7 +4,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
 
 /*
-Theme Name: Kavos Island
+Theme Name: The Kavos Island
 Description: Child of Travel Island
 Author: Stephen J. Algeo
 Template: travel_island
@@ -217,7 +217,8 @@ a.comment-reply-link:hover, a.comment-reply-link:focus, a.comment-reply-link:act
 .blog_text, .entry-content {
     margin-right:30px;
     margin-left:30px;
-    margin-top:40px;
+    /*margin-top:40px;*/
+    padding-bottom: 20px;
 }
 
 img.alignleft, img.alignright, img.aligncenter{
@@ -433,4 +434,44 @@ body{
     width:90%;
     display: block;
     margin: 0 auto;
+}
+
+.cart-table{
+    width:100%;
+    font-family: 'Open Sans','Lucida Sans Unicode', sans-serif;
+    font-size: 1.2em;
+}
+
+.cart-table .left {
+    text-align: left;
+}
+
+.cart-table .center {
+    text-align: center;
+}
+
+.cart-table .right {
+    text-align: right;
+}
+
+.ppbutton{
+    font-family: 'Open Sans','Lucida Sans Unicode', sans-serif;
+    text-align: center;
+    padding:15px;
+    margin: 10px;
+    font-size: 1.2em;
+    background-color: #4E83B9;
+    color:white;
+    border-radius: 10px;
+    border-style: none;
+}
+
+.ppbutton:hover {
+    background-color: darkorange;
+    cursor: pointer;
+}
+
+.kbpanel{
+    min-height: 340px;
+    padding-bottom: 0;
 }

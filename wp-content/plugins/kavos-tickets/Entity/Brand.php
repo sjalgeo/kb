@@ -77,9 +77,9 @@ class Brand {
         return $this->description;
     }
 
-    public function getDefaultprice()
+    public function getDefaultprice($formatted=false)
     {
-        if (!is_null($this->defaultprice)) return  kbFormatPrice($this->defaultprice);
+        if (!is_null($this->defaultprice)) return  $formatted ? kbFormatPrice($this->defaultprice) : $this->defaultprice ;
 
         return 'null';
     }

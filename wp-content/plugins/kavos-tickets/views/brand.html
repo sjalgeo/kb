@@ -1,22 +1,20 @@
-
-
-<div class="kbleft">
-    <img src="{BRAND_IMAGE}">
-
-    <!--<h1>{BRAND_TITLE}</h1>-->
-
-    <p>{BRAND_DESCRIPTION}</p>
+<div class="entry-header">
+    <h1 class="entry-title"><span>{BRAND_TITLE}</span></h1>
 </div>
 
-<div class="kbright">
-    {BUY_OPTIONS}
+<div class="entry-content kbpanel">
+
+    <div class="kbleft">
+        <img src="{BRAND_IMAGE}">
+    </div>
+
+    <div class="kbright">
+        {BUY_OPTIONS}
+
+        <div id="kbPrice"><p>From {BRAND_FROM_PRICE}</p></div>
+
+        <!--{PAYPAL}-->
+        {BUTTONS}
+        {SCRIPT}
+    </div>
 </div>
-
-<div class="kbright">
-    <div id="kbPrice"><p>From {BRAND_FROM_PRICE}</p></div>
-
-    <!--{PAYPAL}-->
-    {BUTTONS}
-    {SCRIPT}
-</div>
-

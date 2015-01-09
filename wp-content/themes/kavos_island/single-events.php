@@ -1,22 +1,29 @@
 <?php
 /**
- * Brand / Event template
+ * The template for displaying Brand/Event Pages.
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site will use a
+ * different template.
+ *
+ * @package WordPress
+ * @subpackage travel_island
+ * @since travel_island 1.0
  */
 ?>
 
-<?php get_header('shop'); ?>
+<?php get_header(); ?>
 
-<?php do_action('jigoshop_before_main_content'); // <div id="container"><div id="content" role="main"> ?>
+<?php outputBrandPage($post); ?>
 
-<?php
-    $brand_id = get_post_meta($post->ID, 'brand_id', false);
-    $brand_id = $brand_id[0];
+    <div class="entry-content">
 
-    $brand = new Brand($brand_id);
-    echo createBrandPage($brand);
+        <?php the_post(); ?>
+        <?php the_content(); ?>
 
-?>
+    </div>
 
-<?php do_action('jigoshop_after_main_content'); // </div></div> ?>
-<?php do_action('jigoshop_sidebar'); ?>
-<?php get_footer('shop'); ?>
+<?php outputBrandPage($post); ?>
+
+<?php get_footer(); ?>
