@@ -464,6 +464,9 @@ body{
     color:white;
     border-radius: 10px;
     border-style: none;
+    text-align: center;
+    margin:0 auto;
+    display: block;
 }
 
 .ppbutton:hover {
