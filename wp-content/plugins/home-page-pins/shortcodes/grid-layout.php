@@ -50,7 +50,7 @@ function grid_layout($atts){
 
     $layout_output .= sja_create_post_pin(
         'wp-content/uploads/2014/01/trinity_square-trans-300x294.png',
-        '../product/trinity-clubnights/',
+        'events/club-trinity/',
         'Club Trinity Live in Kavos',
         "Huge Summer for 2015. Book Now!");
 
@@ -78,13 +78,13 @@ function grid_layout($atts){
 
     $layout_output .= sja_create_post_pin(
         'wp-content/uploads/2013/11/Booze-Cruise-Kavos-Group-300x300.png',
-        '../product/kavos-vip-booze-cruise/',
+        'events/kavos-vip-booze-cruise/',
         'Booze Cruise',
         'The Best Day of your holiday without a doubt, Book Now');
 
     $layout_output .= sja_create_post_pin(
         'wp-content/uploads/2014/03/sandstorm-beach-party-300x300.jpg',
-        '../product/sandstorm-clubnights/',
+        'events/sandstorm-clubnights/',
         'Sandstorm Clubnights',
         'Breach, MK, Jaguar Skills, Skepta');
 
@@ -92,7 +92,7 @@ function grid_layout($atts){
 
     $layout_output .= sja_create_post_pin(
         'wp-content/uploads/2013/11/super-paint-party-20141-300x300.jpg',
-        '../product/super-paint-party/',
+        'events/super-paint-party/',
         'Super Paint Party',
         "Last year's biggest party returns for 2015");
 
