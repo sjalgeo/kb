@@ -3,7 +3,17 @@
 function getRemainingEvents($brand)
 {
     global $wpdb;
-    $rs = $wpdb->get_results( 'SELECT * FROM events WHERE brand_id = '.$brand->getId(). ' ORDER BY date' );
+
+    $q = '
+            SELECT *
+            FROM events
+            WHERE enabled = 1
+            AND brand_id = '.$brand->getId(). '
+            AND date > NOW()
+            ORDER BY date';
+
+    $rs = $wpdb->get_results( $q );
+
     return $rs;
 }
 

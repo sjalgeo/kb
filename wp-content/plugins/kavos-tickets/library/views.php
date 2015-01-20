@@ -33,3 +33,12 @@ function outputBrandPage($post)
     $brand = new Brand($brand_id);
     echo createBrandPage($brand);
 }
+
+function outputBrandCTA($post)
+{
+    $brand_id = get_post_meta($post->ID, 'brand_id', false);
+    $brand_id = $brand_id[0];
+
+    $brand = new Brand($brand_id);
+    echo createBrandCTA($brand);
+}

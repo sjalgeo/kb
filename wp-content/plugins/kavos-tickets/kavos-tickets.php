@@ -22,7 +22,9 @@ include('library/events.php');
 include('library/views.php');
 include('shortcodes/brand.php');
 include('shortcodes/cart.php');
+include('shortcodes/events.php');
 include('controllers/brandpage.php');
+include('controllers/eventspage.php');
 
 include('Entity/Brand.php');
 include('Entity/Event.php');

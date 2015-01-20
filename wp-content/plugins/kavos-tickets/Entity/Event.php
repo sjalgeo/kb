@@ -13,6 +13,8 @@ class Event
     private $brand_id;
     private $price;
 
+    private $brand;
+
     public function __construct($id)
     {
         global $wpdb;
@@ -30,7 +32,14 @@ class Event
             $this->date = $event->date;
             $this->brand_id = $event->brand_id;
             $this->price = $event->price;
+
+            $this->brand = new Brand($this->brand_id);
         }
+    }
+
+    public function getBrand()
+    {
+        return $this->brand;
     }
 
     public function getArtist()
@@ -90,6 +99,10 @@ class Event
 
     public function getImage()
     {
+        if (is_null($this->image))
+        {
+            return $this->brand->getImage();
+        }
         return $this->image;
     }
 
@@ -100,7 +113,11 @@ class Event
 
     public function getName()
     {
-        return $this->name;
+        $brand = new Brand($this->brand_id);
+        $name = $brand->getName();
+        if ($this->artist!='') $name .= ' ('.$this->artist.')';
+
+        return $name;
     }
 
     public function getDisplayName($variations=false)
@@ -109,8 +126,11 @@ class Event
         $name = $brand->getName().' - '.$this->getDateFormatted();
         if ($this->artist!='') $name .= ' ('.$this->artist.')';
 
-        foreach($variations as $key => $var){
-            if ($key=='cruiseticket') $name .= ' ('. ucwords($var) . ')';
+        if($variations)
+        {
+            foreach($variations as $key => $var){
+                if ($key=='cruiseticket') $name .= ' ('. ucwords($var) . ')';
+            }
         }
 
         return $name;
