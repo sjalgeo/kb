@@ -9,6 +9,7 @@ class Brand {
     private $description;
     private $defaultprice;
     private $enabled;
+    private $offsalemessage;
 
     public function __construct($id)
     {
@@ -26,9 +27,13 @@ class Brand {
             $this->description = $brand->description;
             $this->defaultprice = $brand->defaultprice;
             $this->enabled = $brand->enabled;
+            $this->offsalemessage = $brand->offsalemessage;
         }
     }
-
+public function getOffsaleMessage()
+{
+    return $this->offsalemessage;
+}
     public function setId($id)
     {
         $this->id = $id;
