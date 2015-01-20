@@ -24,6 +24,6 @@
 
     </div>
 
-<?php outputBrandPage($post); ?>
+<?php //outputBrandPage($post); ?>
 
 <?php get_footer(); ?>

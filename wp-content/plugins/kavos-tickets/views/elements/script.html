@@ -61,8 +61,8 @@
                     // Error
                 } else {
                     console.dir($jsondata);
-
                     jQuery('#kbInfo').html('Product Added. <a href="'+window.siteurl+'cart">View Cart?</a>');
+                    window.location.assign(window.siteurl+'cart');
                 }
             },
             error: function(xhr, textStatus, errorThrown) {
@@ -74,7 +74,7 @@
     function kbEmptyCart(){
 
         jQuery.ajax({
-            url: 'http://localhost:8888/kb15/wp-content/plugins/kavos-tickets/ajax/emptycart.php',
+            url: window.siteurl+'wp-content/plugins/kavos-tickets/ajax/emptycart.php',
             type: 'POST',
             data: {
 //                eventid: $eventid
@@ -83,6 +83,7 @@
 
                 $jsondata = JSON.parse(data);
                 console.dir($jsondata);
+                window.location.assign(window.siteurl+'cart');
             },
             error: function(xhr, textStatus, errorThrown) {
                 console.log(textStatus.reponseText);

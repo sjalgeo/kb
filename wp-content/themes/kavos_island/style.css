@@ -478,3 +478,31 @@ body{
     min-height: 340px;
     padding-bottom: 0;
 }
+.archive-left img{
+    height:200px;
+}
+.archive-left{
+    float:left;
+    width:200px;
+    display: inline-block;
+}
+.archive-right{
+    float:right;
+    width:75%;
+    display: inline-block;
+}
+
+.kbcartfloat{
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: ghostwhite;
+    height: 70px;
+    padding-left: 30px;
+}
+
+.kbcartfloat p {
+    text-align: center;
+}

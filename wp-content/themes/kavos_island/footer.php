@@ -37,8 +37,33 @@ do_action('widget_area_manager_hook','content_full_page_bottom');
 </div>
 </div><!--end holder-->
 
-
 <?php wp_footer(); ?>
+
+<div class="kbcartfloat">
+
+<?php
+$cart = kbGetCart();
+
+
+if ($cart) { ?>
+        <p>
+            <?php echo sizeof($cart) ?> items in
+            <a href="<?php echo get_site_url(); ?>/cart">Cart</a>
+        </p>
+
+
+<?php } else { ?>
+<!--    <p>-->
+<!--        Book VIP Booze Cruise Tickets now from just £10 deposit.-->
+<!--        <a href="--><?php //echo get_site_url(); ?><!--/kavos-vip-booze-cruise">Click Here for info</a>-->
+<!--    </p>-->
+
+    <p>
+        Sign Up for 2015 Event Updates
+        <a href="<?php echo get_site_url(); ?>/sign-up-for-updates">Click Here for info</a>
+    </p>
+<?php } ?>
+</div>
 
 </body>
 </html>

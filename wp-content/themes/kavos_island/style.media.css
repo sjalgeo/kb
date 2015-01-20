@@ -125,6 +125,10 @@
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 
+    .archive-right{
+        width:100%;
+    }
+
     .bg_details,
     .bg_wave_tile,
     .bg_wave_tile_cover{
@@ -239,6 +243,17 @@
 }
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
+
+    .archive-right{
+        width:100%;
+    }
+
+    .entry-header{
+        margin-top: 40px;
+    }
+    .lineup{
+        font-size: 1.2em;
+    }
 
     body{
         background: #b3d9fd;
