@@ -1,3 +1,21 @@
+<p>
+    Your Name
+<br>
+    <input onfocus="kbshowSave()" id="name" type="text" placeholder="" style="font-size: 1.1em;width:300px;">
+</p>
+<p>
+    Enter your Emails Address.
+<br>
+    <input onfocus="kbshowSave()" id="email" type="text" placeholder="you@example.com" style="font-size: 1.1em;width:300px;">
+</p>
+<p>
+    IF YOUR EMAIL IS INCORRECT YOU WILL NOT RECIEVE YOUR TICKETS.
+</p>
+<p id="feedback">
+
+</p>
+<button id="saveorder" onclick="kbSaveOrder()" type="button" class="ppbutton">Confirm Details</button>
+
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
     <input type="hidden" name="cmd" value="_cart">
     <!--<input type="hidden" name="cmd" value="_express-checkout">-->
@@ -7,7 +25,7 @@
 
     {PAYPAL_ITEMS}
 
-    <input type="hidden" name="notify_url" value="http://reports.kavosbooked.com/app_dev.php/ipn/">
+    <input type="hidden" name="notify_url" value="http://stephenalgeo.com/kbt/tickets/web/app_dev.php/ipn/">
     <!--<input type="hidden" name="notify_url" value="http://reports.kavosbooked.com/ipn/">-->
     <input type="hidden" name="return" value="discount.kavosbooked.com/oto">
     <input type="hidden" name="rm" value="2">
@@ -16,7 +34,39 @@
     <input type="hidden" name="lc" value="UK">
     <input type="hidden" name="currency_code" value="GBP">
 
-    <input type="hidden" name="custom" value="{CART_ID}">
+    <input id="ppcustom" type="hidden" name="custom" value="{CART_ID}">
 
-    <input type="submit" class="ppbutton" name="submit" value="Complete Order" alt="Pay with Paypal">
+    <input id="kbformsubmit" type="submit" class="ppbutton" name="submit" value="Complete Order" alt="Pay with Paypal" style="display: none;">
 </form>
+
+<script type="text/javascript">
+    function kbSaveOrder()
+    {
+        console.log(jQuery('#name').val());
+        console.log(jQuery('#email').val());
+
+        jQuery.post(window.siteurl+"wp-content/plugins/kavos-tickets/ajax/logorder.php",
+                {
+                    "name": jQuery('#name').val(),
+                    "email": jQuery('#email').val()
+                },
+                function(data)
+                {
+                    // Display data fields
+//                    $('#tablecontainer-'+optionid).html(data);
+                    $data = JSON.parse(data);
+                    jQuery('#ppcustom').val($data.id)
+                }
+        );
+
+        jQuery('#saveorder').hide();
+        jQuery('#kbformsubmit').show();
+    }
+
+    function kbshowSave()
+    {
+        jQuery('#saveorder').show();
+        jQuery('#kbformsubmit').hide();
+        console.log(24958743895617328456293);
+    }
+</script>
