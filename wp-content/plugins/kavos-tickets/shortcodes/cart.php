@@ -16,7 +16,7 @@ function sja_kavos_cart_shortcode($atts){
         function kbEmptyCart(){
 
             jQuery.ajax({
-                url: 'http://localhost:8888/kb15/wp-content/plugins/kavos-tickets/ajax/emptycart.php',
+                url: '<?php echo get_site_url(); ?>/wp-content/plugins/kavos-tickets/ajax/emptycart.php',
                 type: 'POST',
                 data: {
                     //                eventid: $eventid
@@ -25,6 +25,7 @@ function sja_kavos_cart_shortcode($atts){
 
                     $jsondata = JSON.parse(data);
                     console.dir($jsondata);
+                    window.location.assign('<?php echo get_site_url(); ?>/cart');
                 },
                 error: function(xhr, textStatus, errorThrown) {
                     console.log(textStatus.reponseText);

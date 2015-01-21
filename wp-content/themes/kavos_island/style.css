@@ -453,7 +453,9 @@ body{
 .cart-table .right {
     text-align: right;
 }
-
+.kbSmallButton{
+    cursor: pointer;
+}
 .ppbutton{
     font-family: 'Open Sans','Lucida Sans Unicode', sans-serif;
     text-align: center;
@@ -505,4 +507,10 @@ body{
 
 .kbcartfloat p {
     text-align: center;
+}
+
+.mc4wp-form #mc4wp_email{
+    font-size: 1em;
+    width:300px;
+    padding:10px;
 }
