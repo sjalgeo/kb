@@ -6,7 +6,9 @@ function createBrandPage($brand)
     $view = getView('elements/brand/main.html');
 
     # Ticket Types
-    $data['KB_RIGHT'] = $brand->getEnabled() ? getView('elements/brand/available.html') : $brand->getOffsaleMessage();
+    $options = getRemainingEvents($brand);
+
+    $data['KB_RIGHT'] = ($brand->getEnabled() AND $options) ? getView('elements/brand/available.html') : $brand->getOffsaleMessage();
     $data['BUY_OPTIONS'] = kbGetProductOptions($brand);
     $data['BUTTONS'] = getElement('buttons.html');
     $data['SCRIPT'] = getElement('script.html');
