@@ -52,11 +52,11 @@ function grid_layout($atts){
         'wp-content/uploads/2014/01/trinity_square-trans-300x294.png',
         'events/club-trinity/',
         'Club Trinity Live in Kavos',
-        "Huge Summer for 2015. Book Now!");
+        "Huge Summer for 2015. Info Coming Soon!");
 
     $layout_output .= sja_create_post_pin(
         'wp-content/uploads/2014/01/buzz-bar-street-view.jpg',
-        '../the-best-bars-in-kavos',
+        'the-best-bars-in-kavos',
         'Kavos Top Bars',
         'A look at a few of our favourites..');
 
@@ -64,7 +64,7 @@ function grid_layout($atts){
 
     $layout_output .= sja_create_post_pin(
         'wp-content/uploads/2014/01/kavos.love_.corfu_.condom.png',
-        '../kavos-the-virgins-guide/',
+        'kavos-the-virgins-guide/',
         "Kavos Virgin's Guide",
         'Your BIG questions answered.');
 
@@ -95,6 +95,12 @@ function grid_layout($atts){
         'events/super-paint-party/',
         'Super Paint Party',
         "Last year's biggest party returns for 2015");
+
+//    $layout_output .= sja_create_post_pin(
+//        'wp-content/uploads/2013/11/super-paint-party-20141-300x300.jpg',
+//        'events/powder-party/',
+//        'Powder Party',
+//        "Brand new for 2015");
 
 //    $layout_output .= sja_create_post_pin(
 //        'wp-content/uploads/2014/04/dapper_laughs_kavos-228x228.jpg',

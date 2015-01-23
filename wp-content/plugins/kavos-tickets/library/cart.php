@@ -62,7 +62,7 @@ function kbGetCartTable()
                 $thisitem = str_replace('{COUNTER}', $counter, $thisitem);
                 $thisitem = str_replace('{ITEM_NAME}', $name, $thisitem);
                 $thisitem = str_replace('{ITEM_ID}', $event->getId(), $thisitem);
-                $thisitem = str_replace('{ITEM_PRICE}', $event->getPaypalPrice(), $thisitem);
+                $thisitem = str_replace('{ITEM_PRICE}', $event->getPaypalPrice($cartitem['variations']), $thisitem);
                 $thisitem = str_replace('{ITEM_QUANTITY}', $quantity, $thisitem);
 
 

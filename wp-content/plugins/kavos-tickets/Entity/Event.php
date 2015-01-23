@@ -176,9 +176,9 @@ class Event
         return $this->price;
     }
 
-    public function getPaypalPrice()
+    public function getPaypalPrice($variations=false)
     {
-        return kbPaypalPrice($this->getPriceRaw());
+        return kbPaypalPrice($this->getPriceRaw($variations));
     }
 
     public function setPrice($price)
