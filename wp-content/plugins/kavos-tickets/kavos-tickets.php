@@ -9,6 +9,8 @@ Author URI: TODO
 Tested up to: 4.0
  */
 
+
+
 define('KBTICKETS_PLUGIN_PATH', plugin_dir_path(__FILE__));
 define('KBTICKETS_VIEWS', plugin_dir_path(__FILE__).'views/');
 define('KBTICKETS_PLUGIN_SLUG','kavos-tickets');
