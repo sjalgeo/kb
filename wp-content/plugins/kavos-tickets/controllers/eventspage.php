@@ -4,7 +4,7 @@ function showAllEventsByDate()
 {
     global $wpdb;
 
-    $events = $wpdb->get_results( 'SELECT * FROM events WHERE date >= NOW() ORDER BY date' );
+    $events = $wpdb->get_results( 'SELECT * FROM events WHERE date >= NOW() AND brand_id <> 1 ORDER BY date' );
     $brandstemp = $wpdb->get_results( 'SELECT * FROM brands' );
 
     $brands = array();
