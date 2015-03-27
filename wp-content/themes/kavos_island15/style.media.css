@@ -39,6 +39,7 @@
 
     .kbleft img{
         width:auto;
+        width:100%;
     }
 }
 
@@ -252,7 +253,7 @@
     }
 
     .entry-header{
-        margin-top: 40px;
+        margin-top: 0px;
     }
     .lineup{
         font-size: 1.2em;

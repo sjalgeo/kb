@@ -77,16 +77,17 @@ function grid_layout($atts){
 //        'VIP Access to the biggest events');
 
     $layout_output .= sja_create_post_pin(
-        'wp-content/uploads/2013/11/Booze-Cruise-Kavos-Group-300x300.png',
+//        'wp-content/uploads/2013/11/Booze-Cruise-Kavos-Group-300x300.png',
+        'wp-content/uploads/2015/03/Photo-27-03-2015-16-32-14.jpg',
         'events/kavos-vip-booze-cruise/',
         'Booze Cruise',
         'The Best Day of your holiday without a doubt, Book Now');
 
-    $layout_output .= sja_create_post_pin(
-        'wp-content/uploads/2014/03/sandstorm-beach-party-300x300.jpg',
-        'events/sandstorm-clubnights/',
-        'Sandstorm Clubnights',
-        'Breach, MK, Jaguar Skills, Skepta');
+//    $layout_output .= sja_create_post_pin(
+//        'wp-content/uploads/2014/03/sandstorm-beach-party-300x300.jpg',
+//        'events/sandstorm-clubnights/',
+//        'Sandstorm Clubnights',
+//        'Breach, MK, Jaguar Skills, Skepta');
 
     $layout_output .= sja_show_random_posts(5);
 
@@ -96,17 +97,13 @@ function grid_layout($atts){
         'Super Paint Party',
         "Last year's biggest party returns for 2015");
 
-//    $layout_output .= sja_create_post_pin(
+    $layout_output .= sja_create_post_pin(
 //        'wp-content/uploads/2013/11/super-paint-party-20141-300x300.jpg',
-//        'events/powder-party/',
-//        'Powder Party',
-//        "Brand new for 2015");
+        'wp-content/uploads/2015/03/colours.jpg',
+        'events/powder-party/',
+        'Colours Powder Party',
+        "Brand new for 2015 and not to be missed!");
 
-//    $layout_output .= sja_create_post_pin(
-//        'wp-content/uploads/2014/04/dapper_laughs_kavos-228x228.jpg',
-//        '../product/proper-moist-party/',
-//        'Dapper Laughs',
-//        'Hosting weekly parties throughout July');
 
 //    $layout_output .= sja_create_post_pin(
 //        'http://kavosbooked.com/wp-content/uploads/2013/01/slider-02-headfucker.png',
